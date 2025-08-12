@@ -4,13 +4,13 @@ public class compras {
     private int id_compra;
     private int id_cliente;
     private int id_libros;
-    private int fecha_compra;
+    private int valor;
 
-    public compras(int id_compra, int id_cliente, int id_libros, int fecha_compra) {
+    public void compra(int id_compra, int id_cliente, int id_libros, int valor) {
         this.id_compra = id_compra;
         this.id_cliente = id_cliente;
         this.id_libros = id_libros;
-        this.fecha_compra = fecha_compra;
+        this.valor = valor;
     }
 
     public int getId_compra() {
@@ -38,27 +38,27 @@ public class compras {
     }
 
     public int getFecha_compra() {
-        return fecha_compra;
+        return valor;
     }
 
-    public void setFecha_compra(int fecha_compra) {
-        this.fecha_compra = fecha_compra;
+    public void setFecha_compra(int valor) {
+        this.valor = valor;
     }
 
 
     public void ingresar_datos() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\ningrese la fecha de la compra: ");
-        fecha_compra = sc.nextInt();
+        System.out.println("\nvalor de la compra: ");
+        valor = sc.nextInt();
     }
     
 
 
     public void mostrar_datos() {
-        System.out.println("\nID de Compras" + id_compra);
-        System.out.println("ID de Cliente" + id_cliente);
-        System.out.println("ID de Libros" + id_libros);
-        System.out.println("Fecha de Compra" + fecha_compra);
+        System.out.println("\nID de Compras: " + id_compra);
+        System.out.println("ID de Cliente: " + id_cliente);
+        System.out.println("ID de Libros: " + id_libros);
+        System.out.println("Fecha de Compra: " + valor);
     }
 }

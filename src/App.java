@@ -6,6 +6,7 @@ public class App {
         Clientes gestor = new Clientes(); 
         Libros gestorLibros = new Libros();
         categoria gestorCategoria = new categoria();
+        compras nuevaCompra = new compras();
         TipoIdentidad gestorTipoIdentidad = new TipoIdentidad();
         int opcion;
         System.out.println("Bienvenido al sistema de gestión de clientes");
@@ -18,8 +19,8 @@ public class App {
             System.out.println("4. Mostrar todos los libros");
             System.out.println("5. Ingresar tipo de identidad");
             System.out.println("6. Mostrar tipo de identidad");
-            System.out.println("7. Ingresar categoria");
-            System.out.println("8. ingresar datos de categoria");
+            System.out.println("7. detalles de la compra");
+            System.out.println("8. Ingresar categoria");
             System.out.println("9. Mostrar categoria");
             System.out.println("22. Salir");
             System.out.print("Elige una opción: ");
@@ -46,8 +47,8 @@ public class App {
                     gestorTipoIdentidad.mostrar_datos();
                     break;
                 case 7:
-                    compras nuevaCompra = new compras(0, 0, 0, 0);
                     nuevaCompra.ingresar_datos();
+                    nuevaCompra.mostrar_datos();
                     break;
                 case 8:
                     gestorCategoria.ingresar_datos();

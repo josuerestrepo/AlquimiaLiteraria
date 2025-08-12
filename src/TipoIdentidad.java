@@ -30,7 +30,7 @@ public class TipoIdentidad {
     public void ingresar_datos() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("ingrese su tipo de identidad (pasaporte, cedula, N documento): ");
+        System.out.println("ingrese el numero de su tipo de identidad (pasaporte, cedula, N documento): ");
         id_tipo_identidad = sc.nextInt();
 
         System.out.println("ingrese una descripcion de su identidad: ");
