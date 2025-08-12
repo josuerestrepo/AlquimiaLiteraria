@@ -5,6 +5,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         Clientes gestor = new Clientes(); 
         Libros gestorLibros = new Libros();
+        TipoIdentidad gestorTipoIdentidad = new TipoIdentidad();
         int opcion;
         System.out.println("Bienvenido al sistema de gestión de clientes");
 
@@ -35,11 +36,22 @@ public class App {
                 case 5:
                     gestorLibros.mostrarListaLibros();
                     break;
+                case 6:
+                    gestorTipoIdentidad.ingresar_datos();
+                    break;
+                case 7:
+                    gestorTipoIdentidad.mostrar_datos();
+                    break;
+                case 8:
+                    compras nuevaCompra = new compras(0, 0, 0, 0);
+                    nuevaCompra.ingresar_datos();
+                    break;
+                
 
                 default:
                     System.out.println("Opción inválida. Intenta de nuevo.");
             }
-        } while (opcion != 6);
+        } while (opcion != 10);
 
         scanner.close();
     }
