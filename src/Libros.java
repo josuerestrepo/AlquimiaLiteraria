@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Libros {
 
-    // Clase interna para representar un libro
+
     public static class Libro {
         private String titulo;
         private String autor;
@@ -21,7 +21,7 @@ public class Libros {
             System.out.println("Precio: " + precio);
         }
 
-        // Getters y setters
+ 
         public String getTitulo() { return titulo; }
         public void setTitulo(String titulo) { this.titulo = titulo; }
         public String getAutor() { return autor; }
@@ -30,10 +30,9 @@ public class Libros {
         public void setPrecio(double precio) { this.precio = precio; }
     }
 
-    // Lista de libros
     private final ArrayList<Libro> listaLibros = new ArrayList<>();
 
-    // Método para agregar un libro
+
     public void agregarLibro(Scanner scanner) {
         System.out.println("Ingrese el título del libro:");
         String titulo = scanner.nextLine();
@@ -43,7 +42,7 @@ public class Libros {
 
         System.out.println("Ingrese el precio del libro:");
         double precio = scanner.nextDouble();
-        scanner.nextLine(); // limpiar el buffer
+        scanner.nextLine(); 
 
         Libro nuevoLibro = new Libro(titulo, autor, precio);
         listaLibros.add(nuevoLibro);
@@ -51,7 +50,7 @@ public class Libros {
         System.out.println("Libro agregado exitosamente.");
     }
 
-    // Método para mostrar todos los libros
+ 
     public void mostrarListaLibros() {
         System.out.println("Lista de libros:");
         for (Libro libro : listaLibros) {
